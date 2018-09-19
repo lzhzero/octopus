@@ -21,7 +21,7 @@ find_package(Threads REQUIRED)
 # Incs and Libs
 set(INCLUDE_BASE ${PROJECT_SOURCE_DIR}/include)
 include_directories("/usr/local/ofed/include" ${INCLUDE_BASE})
-link_libraries(${CRYPTO_LIBRARIES} ${CMAKE_DL_LIBS})
+link_libraries(${CRYPTO_LIBRARIES} ${CMAKE_DL_LIBS} -libverbs -lfuse)
 #message("---: ${CRYPTO_LIBRARIES}")
 
 # Source file define
